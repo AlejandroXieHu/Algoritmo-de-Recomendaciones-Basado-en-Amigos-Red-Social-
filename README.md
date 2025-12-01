@@ -79,8 +79,11 @@ Elige tu gusto #3: 1
 Resultados:
 
 === Resultados para Alejandro ===
+
 Diego: 2 gustos en común
+
 Guillermo: 1 gusto en común
+
 Valeria: 0 gustos en común
 
 
@@ -89,9 +92,11 @@ Recomendaciones:
 Usuarios recomendados:
 
 - Diego (Tiene 2 gustos en común)
+
 - Guillermo (Tiene 1 gusto en común)
 
 🔍 ¿Cómo funciona internamente?
+
 1️⃣ Estructura Usuario
 
 Cada usuario contiene:
