@@ -1,52 +1,62 @@
 Algoritmo de Recomendaciones Basado en Amigos (Red Social)
-(Proyecto en C++)
-📌 LINK DEL VIDEO DE EXPLICACIÓN:
 
-(Aquí puedes poner tu URL cuando la tengas)
+📌 LINK DEL VIDEO DE EXPLICACIÓN
+
 
 📋 Descripción
 
 Este proyecto implementa un sistema de recomendación de usuarios basado en similitud de gustos, inspirado en redes sociales como Instagram o TikTok.
-Está desarrollado en C++ utilizando estructuras, vectores, validaciones y ordenamiento.
+Está desarrollado en C++ usando estructuras, vectores, validaciones y ordenamiento.
 
 El programa permite que un usuario:
 
-✏️ Escriba su nombre
+Escriba su nombre
 
-🎯 Seleccione sus gustos desde una lista de intereses
+Seleccione sus gustos desde una lista de intereses disponibles
 
-👥 Compare sus gustos con los de otros 10 usuarios registrados
+Compare sus intereses con los de otros 10 usuarios registrados
 
-⭐ Obtenga recomendaciones ordenadas por cantidad de gustos en común
+Obtenga recomendaciones ordenadas por la cantidad de gustos en común
 
-Es un proyecto ideal para aprender:
+Es ideal para practicar:
 
 Estructuras
 
-Vectores y conjuntos
+Vectores
 
-Búsqueda eficiente
+Búsqueda eficiente con unordered_set
 
-Ordenamiento
+Ordenamiento con std::sort
 
 Validaciones de entrada
 
-🎯 Características principales
+🎯 Características
+
 ✔ Registro de 10 usuarios con gustos predefinidos
+
 ✔ Lista de intereses disponible (con verificación de repetidos)
-✔ Comparación rápida usando unordered_set
+
+✔ Comparación eficiente con unordered_set
+
 ✔ Cálculo de similitud basado en gustos compartidos
+
 ✔ Resultados ordenados de mayor a menor
-✔ Mensajes adaptados (“gusto” / “gustos”)
+
+✔ Mensajes adaptados según singular/plural
+
 ✔ Recomendación automática
-✔ Validaciones para evitar errores (números incorrectos, gustos repetidos, etc.)
+
+✔ Validaciones completas para evitar errores
+
 💻 Uso del programa
 
-Cuando inicia, el programa te pedirá:
+Al iniciar, el programa solicita:
 
-1️⃣ Tu nombre
-2️⃣ Cuántos gustos deseas elegir
-3️⃣ Elegir tus gustos mediante una lista numerada
+Tu nombre
+
+Cuántos gustos quieres elegir
+
+Elegir tus gustos uno por uno desde una lista numerada
 
 Ejemplo:
 
@@ -69,12 +79,15 @@ Elige tu gusto #2: 4
 Elige tu gusto #3: 1
 
 
-Luego verás los resultados:
+Resultados:
 
 === Resultados para Alejandro ===
 Diego: 2 gustos en común
 Guillermo: 1 gusto en común
 Valeria: 0 gustos en común
+
+
+Recomendaciones:
 
 Usuarios recomendados:
 - Diego (Tiene 2 gustos en común)
@@ -85,13 +98,13 @@ Usuarios recomendados:
 
 Cada usuario contiene:
 
-nombre
+Nombre
 
-lista de gustos (vector<string>)
+Lista de gustos (vector<string>)
 
 2️⃣ Lista de intereses disponible
 
-Ejemplos:
+Incluye:
 
 Música
 
@@ -101,42 +114,43 @@ Arte
 
 Cine
 
-Viajes
-
 Deportes
 
 Videojuegos
 
-Etc.
+Moda
+
+Fitness
+
+Viajes
 
 3️⃣ Elección del usuario
 
-El usuario selecciona gustos desde un menú numérico.
+El usuario selecciona gustos mediante números.
 
-Validaciones incluidas:
+Incluye validaciones:
 
-❌ No puede repetir gustos
+No repetir gustos
 
-❌ No puede elegir números fuera de rango
+No números fuera de rango
 
-❌ No puede exceder el límite de gustos
+No exceder el límite máximo
 
 4️⃣ Cálculo de similitud
 
-Se usa un unordered_set para comparar intereses de forma rápida (O(1)).
+Se utiliza un unordered_set para buscar coincidencias en tiempo O(1).
+La similitud es:
 
-La similitud es simplemente:
-
-Cantidad de gustos compartidos entre dos usuarios
+Cantidad de gustos en común entre dos usuarios.
 
 5️⃣ Ordenamiento
 
-Las coincidencias se ordenan con std::sort de mayor a menor.
+Las similitudes se ordenan de mayor a menor usando std::sort.
 
-6️⃣ Recomendación final
+6️⃣ Recomendación
 
-Solo se recomiendan usuarios con 1 o más gustos en común.
+Se muestran únicamente usuarios que compartan 1 o más gustos.
 
 Si no hay coincidencias:
 
-No hay recomendaciones.
+Ningún usuario comparte gustos contigo.
