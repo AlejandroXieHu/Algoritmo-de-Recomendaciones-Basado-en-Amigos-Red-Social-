@@ -1,4 +1,5 @@
 Algoritmo de Recomendaciones Basado en Amigos (Red Social)
+
 📌 LINK DEL VIDEO DE EXPLICACIÓN
 
 
@@ -49,6 +50,7 @@ Seleccionar esos gustos uno por uno
 Ejemplo:
 
 Escribe tu nombre: Alejandro
+
 ¿Cuántos gustos quieres elegir? (máximo 9): 3
 
 
@@ -68,7 +70,9 @@ Lista de gustos:
 Selección:
 
 Elige tu gusto #1: 3
+
 Elige tu gusto #2: 4
+
 Elige tu gusto #3: 1
 
 
@@ -83,6 +87,7 @@ Valeria: 0 gustos en común
 Recomendaciones:
 
 Usuarios recomendados:
+
 - Diego (Tiene 2 gustos en común)
 - Guillermo (Tiene 1 gusto en común)
 
@@ -120,6 +125,7 @@ Viajes
 3️⃣ Elección del usuario
 
 El usuario elige gustos mediante números.
+
 Validaciones incluidas:
 
 No repetir gustos
