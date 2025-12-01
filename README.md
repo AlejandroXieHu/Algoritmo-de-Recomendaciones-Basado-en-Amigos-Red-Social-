@@ -7,17 +7,18 @@ Algoritmo de Recomendaciones Basado en Amigos (Red Social)
 
 Este proyecto implementa un sistema de recomendación de usuarios basado en similitud de gustos, inspirado en redes sociales como Instagram y TikTok.
 
+
 El usuario:
 
-Ingresa su nombre
+-Ingresa su nombre
 
-Selecciona gustos desde una lista
+-Selecciona gustos desde una lista
 
-Compara sus gustos con los de 10 usuarios registrados
+-Compara sus gustos con los de 10 usuarios registrados
 
-Obtiene recomendaciones ordenadas por coincidencias
+-Obtiene recomendaciones ordenadas por coincidencias
 
-Es ideal para practicar estructuras, vectores, validaciones y ordenamiento en C++.
+
 
 🎯 Características
 
@@ -37,15 +38,17 @@ Es ideal para practicar estructuras, vectores, validaciones y ordenamiento en C+
 
 ✔ Mensajes correctos según singular/plural
 
+
 💻 Uso del programa
 
 Al iniciar, el programa te pedirá:
 
-Tu nombre
+-Tu nombre
 
-Cuántos gustos quieres elegir
+-Cuántos gustos quieres elegir
 
-Seleccionar esos gustos uno por uno
+-Seleccionar esos gustos uno por uno
+
 
 Ejemplo:
 
@@ -95,7 +98,10 @@ Usuarios recomendados:
 
 - Guillermo (Tiene 1 gusto en común)
 
+
+
 🔍 ¿Cómo funciona internamente?
+
 
 1️⃣ Estructura Usuario
 
@@ -104,6 +110,7 @@ Cada usuario contiene:
 Nombre
 
 Lista de gustos (vector<string>)
+
 
 2️⃣ Lista de intereses
 
@@ -127,6 +134,7 @@ Fitness
 
 Viajes
 
+
 3️⃣ Elección del usuario
 
 El usuario elige gustos mediante números.
@@ -139,15 +147,18 @@ No ingresar números inválidos
 
 No exceder el límite de gustos
 
+
 4️⃣ Cálculo de similitud
 
 Se usa unordered_set para comparar gustos rápidamente.
 
 Similitud = número de gustos compartidos.
 
+
 5️⃣ Ordenamiento
 
 Se ordenan las coincidencias usando std::sort de mayor a menor.
+
 
 6️⃣ Recomendación final
 
