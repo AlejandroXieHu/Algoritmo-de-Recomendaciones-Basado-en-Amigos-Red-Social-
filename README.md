@@ -1,6 +1,7 @@
 Algoritmo de Recomendaciones Basado en Amigos (Red Social)
 
 📌 LINK DEL VIDEO DE EXPLICACIÓN
+
 https://youtu.be/87GdxdRrG7E
 
 📋 Descripción
