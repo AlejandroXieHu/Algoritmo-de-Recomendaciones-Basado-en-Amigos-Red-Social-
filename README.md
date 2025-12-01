@@ -1,64 +1,54 @@
 Algoritmo de Recomendaciones Basado en Amigos (Red Social)
 
 📌 LINK DEL VIDEO DE EXPLICACIÓN
-
+https://youtu.be/87GdxdRrG7E
 
 📋 Descripción
 
-Este proyecto implementa un sistema de recomendación de usuarios basado en similitud de gustos, inspirado en redes sociales como Instagram y TikTok.
+Este proyecto implementa un sistema de recomendación de usuarios basado en similitud de gustos y relaciones de amistad, inspirado en redes sociales como Instagram y TikTok.
 
+El usuario puede:
 
-El usuario:
+Ingresar su nombre
 
--Ingresa su nombre
+Seleccionar sus gustos desde una lista
 
--Selecciona gustos desde una lista
+Elegir a sus amigos entre los usuarios disponibles
 
--Compara sus gustos con los de 10 usuarios registrados
+Comparar sus gustos con los de sus amigos
 
--Obtiene recomendaciones ordenadas por coincidencias
+Obtener recomendaciones de gustos que no tiene pero que poseen sus amigos
 
-
+Además, el programa muestra para cada usuario registrado sus amigos, gustos compartidos y recomendaciones.
 
 🎯 Características
 
-✔ 10 usuarios con gustos predefinidos
-
-✔ Lista de intereses disponible
-
+✔ 10 usuarios con gustos y amigos predefinidos
+✔ Lista de intereses disponible para elegir
+✔ Elección de amigos con validación y sin repeticiones
 ✔ Validaciones completas al elegir gustos
-
 ✔ Evita gustos repetidos
-
-✔ Comparación rápida con unordered_set
-
+✔ Comparación rápida usando unordered_set
 ✔ Ordenamiento de coincidencias de mayor a menor
-
 ✔ Muestra solo usuarios con gustos en común
-
-✔ Mensajes correctos según singular/plural
-
+✔ Mensajes dinámicos según singular/plural: "gusto" / "gustos"
 
 💻 Uso del programa
 
-Al iniciar, el programa te pedirá:
+Al iniciar, el programa pedirá:
 
--Tu nombre
+Tu nombre
 
--Cuántos gustos quieres elegir
+Cantidad de gustos a elegir y selección de cada gusto mediante números
 
--Seleccionar esos gustos uno por uno
-
+Cantidad de amigos a elegir y selección de cada amigo mediante números
 
 Ejemplo:
 
 Escribe tu nombre: Alejandro
-
-¿Cuántos gustos quieres elegir? (máximo 9): 3
-
+¿Cuántos gustos quieres elegir? 3
 
 Lista de gustos:
-
 1) Música
 2) Fitness
 3) Tecnología
@@ -69,48 +59,51 @@ Lista de gustos:
 8) Moda
 9) Viajes
 
-
-Selección:
-
 Elige tu gusto #1: 3
-
 Elige tu gusto #2: 4
-
 Elige tu gusto #3: 1
+
+¿Cuántos amigos quieres elegir? 2
+Lista de usuarios disponibles:
+1) Diego
+2) Alonso
+3) David
+4) Guillermo
+...
+Elige al amigo #1: 1
+Elige al amigo #2: 3
 
 
 Resultados:
 
-=== Resultados para Alejandro ===
+=== RESULTADOS PARA TI ===
 
-Diego: 2 gustos en común
+Tienes 2 gustos en común con Diego.
+Recomendaciones basadas en Diego: Cine Videojuegos
 
-Guillermo: 1 gusto en común
+Tienes 1 gusto en común con David.
+Recomendaciones basadas en David: Deportes
 
-Valeria: 0 gustos en común
+=== RESULTADOS DE CADA USUARIO ===
 
-
-Recomendaciones:
-
-Usuarios recomendados:
-
-- Diego (Tiene 2 gustos en común)
-
-- Guillermo (Tiene 1 gusto en común)
-
-
+Usuario: Diego
+Amigos: Alonso David Iker
+Tienes 1 gusto en común con Alonso.
+  Recomendación: Deportes
+Tienes 2 gustos en común con David.
+  Recomendación: Videojuegos
+...
 
 🔍 ¿Cómo funciona internamente?
-
-
 1️⃣ Estructura Usuario
 
 Cada usuario contiene:
 
-Nombre
+nombre
 
-Lista de gustos (vector<string>)
+gustos (vector<string>)
 
+amigos (vector<string>)
 
 2️⃣ Lista de intereses
 
@@ -120,50 +113,45 @@ Música
 
 Tecnología
 
-Arte
-
 Cine
+
+Videojuegos
 
 Deportes
 
-Videojuegos
+Viajes
+
+Arte
 
 Moda
 
 Fitness
 
-Viajes
-
-
 3️⃣ Elección del usuario
 
-El usuario elige gustos mediante números.
+El usuario elige sus gustos y amigos mediante números.
+Validaciones:
 
-Validaciones incluidas:
-
-No repetir gustos
+No repetir gustos ni amigos
 
 No ingresar números inválidos
 
-No exceder el límite de gustos
-
+No exceder el límite disponible
 
 4️⃣ Cálculo de similitud
 
-Se usa unordered_set para comparar gustos rápidamente.
+Se usa unordered_set para comparar los gustos rápidamente.
 
-Similitud = número de gustos compartidos.
+Similitud = número de gustos compartidos entre dos usuarios
 
+5️⃣ Recomendación
 
-5️⃣ Ordenamiento
+Se sugieren los gustos de los amigos que el usuario no tiene
 
-Se ordenan las coincidencias usando std::sort de mayor a menor.
+6️⃣ Resultados finales
 
+Para el usuario actual: muestra gustos en común y recomendaciones basadas en cada amigo
 
-6️⃣ Recomendación final
+Para cada usuario registrado: muestra amigos, gustos compartidos y recomendaciones
 
-Se muestran solamente usuarios con 1 o más gustos en común.
-
-Si no hay coincidencias:
-
-Ningún usuario comparte gustos contigo.
+Si no hay coincidencias: muestra un mensaje indicando que no hay gustos compartidos
