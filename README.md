@@ -79,6 +79,7 @@ Lista de usuarios disponibles:
 3) David
 4) Guillermo
 ...
+
 Elige al amigo #1: 1
 
 Elige al amigo #2: 3
