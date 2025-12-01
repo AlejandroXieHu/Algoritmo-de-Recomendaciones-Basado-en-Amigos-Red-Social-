@@ -24,28 +24,32 @@ Además, el programa muestra para cada usuario registrado sus amigos, gustos com
 🎯 Características
 
 ✔ 10 usuarios con gustos y amigos predefinidos
+
 ✔ Lista de intereses disponible para elegir
+
 ✔ Elección de amigos con validación y sin repeticiones
+
 ✔ Validaciones completas al elegir gustos
+
 ✔ Evita gustos repetidos
+
 ✔ Comparación rápida usando unordered_set
-✔ Ordenamiento de coincidencias de mayor a menor
-✔ Muestra solo usuarios con gustos en común
-✔ Mensajes dinámicos según singular/plural: "gusto" / "gustos"
+
 
 💻 Uso del programa
 
 Al iniciar, el programa pedirá:
 
-Tu nombre
+-Tu nombre
 
-Cantidad de gustos a elegir y selección de cada gusto mediante números
+-Cantidad de gustos a elegir y selección de cada gusto mediante números
 
-Cantidad de amigos a elegir y selección de cada amigo mediante números
+-Cantidad de amigos a elegir y selección de cada amigo mediante números
 
 Ejemplo:
 
 Escribe tu nombre: Alejandro
+
 ¿Cuántos gustos quieres elegir? 3
 
 Lista de gustos:
@@ -60,17 +64,23 @@ Lista de gustos:
 9) Viajes
 
 Elige tu gusto #1: 3
+
 Elige tu gusto #2: 4
+
 Elige tu gusto #3: 1
 
+
 ¿Cuántos amigos quieres elegir? 2
+
 Lista de usuarios disponibles:
+
 1) Diego
 2) Alonso
 3) David
 4) Guillermo
 ...
 Elige al amigo #1: 1
+
 Elige al amigo #2: 3
 
 
@@ -79,31 +89,41 @@ Resultados:
 === RESULTADOS PARA TI ===
 
 Tienes 2 gustos en común con Diego.
+
 Recomendaciones basadas en Diego: Cine Videojuegos
 
+
 Tienes 1 gusto en común con David.
+
 Recomendaciones basadas en David: Deportes
+
 
 === RESULTADOS DE CADA USUARIO ===
 
 Usuario: Diego
+
 Amigos: Alonso David Iker
+
 Tienes 1 gusto en común con Alonso.
+
   Recomendación: Deportes
+  
 Tienes 2 gustos en común con David.
+
   Recomendación: Videojuegos
 ...
 
 🔍 ¿Cómo funciona internamente?
+
 1️⃣ Estructura Usuario
 
 Cada usuario contiene:
 
-nombre
+-Nombre
 
-gustos (vector<string>)
+-Gustos (vector<string>)
 
-amigos (vector<string>)
+-Amigos (vector<string>)
 
 2️⃣ Lista de intereses
 
@@ -130,13 +150,14 @@ Fitness
 3️⃣ Elección del usuario
 
 El usuario elige sus gustos y amigos mediante números.
+
 Validaciones:
 
-No repetir gustos ni amigos
+-No repetir gustos ni amigos
 
-No ingresar números inválidos
+-No ingresar números inválidos
 
-No exceder el límite disponible
+-No exceder el límite disponible
 
 4️⃣ Cálculo de similitud
 
